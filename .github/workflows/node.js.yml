@@ -24,9 +24,7 @@ jobs:
         cache: 'npm'
         cache-dependency-path: generic-order/package-lock.json
     - run: |
-        if [ -e yarn.lock ]; then
-        yarn install --frozen-lockfile
-        elif [ -e package-lock.json ]; then
+        if [ -e package-lock.json ]; then
         npm ci
         else
         npm i
