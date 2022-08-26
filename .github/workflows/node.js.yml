@@ -24,7 +24,7 @@ jobs:
         cache: 'npm'
         cache-dependency-path: generic-order/package-lock.json
     - run: |
-        if [ -e package-lock.json ]; then
+        if [ -e generic-order/package-lock.json ]; then
         npm ci
         else
         npm i
